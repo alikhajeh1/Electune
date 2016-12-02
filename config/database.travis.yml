@@ -2,17 +2,18 @@ sqlite: &sqlite
   adapter: sqlite3
   database: db/<%= Rails.env %>.sqlite3
 
-mysql: &mysql
+mysql2: &mysql2
   adapter: mysql2
-  username: root
+  username: travis
   password:
-  database: my_app_<%= Rails.env %>
+  database: electune_<%= Rails.env %>
+  encoding: utf8
 
 postgresql: &postgresql
   adapter: postgresql
   username: postgres
   password:
-  database: my_app_<%= Rails.env %>
+  database: electune_<%= Rails.env %>
   min_messages: ERROR
 
 defaults: &defaults

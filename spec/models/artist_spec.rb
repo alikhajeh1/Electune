@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe Artist do
-let(:artist) { FactoryGirl.create(:artist) }
-  it "should have a name" do
-    artist.should respond_to :name
+  let(:artist) { FactoryGirl.create(:artist) }
+  it 'has a name' do
+    expect(artist).to respond_to :name
   end
 
-  it "should have a spotify link" do
-    artist.should respond_to :spotify_link
+  it 'has a spotify link' do
+    expect(artist).to respond_to :link
   end
 end

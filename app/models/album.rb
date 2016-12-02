@@ -1,5 +1,4 @@
 class Album < ActiveRecord::Base
-  attr_accessible :name, :release_date, :spotify_link
-  has_many :songs
-  validates_uniqueness_of :spotify_link
+  has_many :songs, dependent: :destroy
+  validates_uniqueness_of :name
 end
